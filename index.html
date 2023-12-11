@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== SWIPER CSS ===============--> 
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Watchful Wrist</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class='bx bxs-watch nav__logo-icon'></i> Watchful Wrist
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#featured" class="nav__link">Featured</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Products</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">New</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x' ></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bx-shopping-bag' ></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt' ></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== CART ====================-->
+    <div class="cart" id="cart">
+        <i class='bx bx-x cart__close' id="cart-close"></i>
+
+        <h2 class="cart__title-center">My Cart</h2>
+
+        <div class="cart__container">
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/41a2CuatkUL._SX300_SY300_QL70_FMwebp_.jpg" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">CHUMBAK</h3>
+                    <span class="cart__price">₹ 1,895</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class='bx bx-minus' ></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class='bx bx-plus' ></i>
+                            </span>
+                        </div>
+
+                        <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71KSeyXsg-L._SY679_.jpg" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">ON TIME OCTUS</h3>
+                    <span class="cart__price">₹ 758</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class='bx bx-minus' ></i>
+                            </span>
+
+                            <span class="cart__amount-number">2</span>
+
+                            <span class="cart__amount-box">
+                                <i class='bx bx-plus' ></i>
+                            </span>
+                        </div>
+
+                        <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71Kx6rgmlRS._SX522_.jpg" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">TIMEX</h3>
+                    <span class="cart__price">₹ 957</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class='bx bx-minus' ></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class='bx bx-plus' ></i>
+                            </span>
+                        </div>
+
+                        <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="cart__prices">
+            <span class="cart__prices-item">4 items</span>
+            <span class="cart__prices-total">₹ 3610</span>
+        </div>
+    </div>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home" id="home">
+            <div class="home__container container grid">
+                <div class="home__img-bg">
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71mVg3aDiNL._SX679_.jpg" alt="" class="home__img">
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                        Facebook
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                        Twitter
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                        Instagram
+                    </a>
+                </div>
+
+                <div class="home__data">
+                    <h1 class="home__title">OUR BROWN GOLD COLLECTION </h1>
+                    <p class="home__description">
+                        Discover the latest imported watches from our Brown Gold Collection: modern, durable, and utterly chic
+                    </p>
+                    <span class="home__price">₹ 999</span>
+
+                    <div class="home__btns">
+                        <a href="#" class="button button--gray button--small">
+                            Discover
+                        </a>
+
+                        <button class="button home__button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== FEATURED ====================-->
+        <section class="featured section container" id="featured">
+            <h2 class="section__title">
+                Featured
+            </h2>
+
+            <div class="featured__container grid">
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81nk55JiKEL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">GUESS</h3>
+                        <p class="featured__desc">Analog Rose Gold Dial Unisex Adult Watch-GW0314L3r</p>
+                        <span class="featured__price">₹ 10,982</span>
+                    </div>
+
+                    <button class="button featured__button">ADD TO CART</button>
+                </article>
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/5159txtY55L._SX425_.jpg" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">FASTRACK</h3>
+                        <p class="featured__desc">Ruffles Analog Beige Dial Women's Watch-6216QM01/NR6216QM01</p>
+                        <span class="featured__price">₹ 2,875</span>
+                    </div>
+
+                    <button class="button featured__button">ADD TO CART</button>
+                </article>
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71B3z-7EWQL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">FOSSIL</h3>
+                        <p class="featured__desc">Gen 6 Digital Black Dial Men's Watch-FTW4061</p>
+                        <span class="featured__price">₹ 11,997</span>
+                    </div>
+
+                    <button class="button featured__button">ADD TO CART</button>
+                </article>
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71qE+ZnDFTL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">FASTRACK</h3>
+                        <p class="featured__desc">Analog Unisex-Adult Watch - 38024PP67W</p>
+                        <span class="featured__price">₹ 699</span>
+                    </div>
+
+                    <button class="button featured__button">ADD TO CART</button>
+                </article>
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61Bdfmo2s0L._SX679_.jpg" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">Fire-Boltt</h3>
+                        <p class="featured__desc">Lumos Stainless Steel Luxury Smart Watch with 1.91” Large Display, Bluetooth Calling, Voice Assistant, 100+ Sports Modes</p>
+                        <span class="featured__price">₹ 1,499</span>
+                    </div>
+
+                    <button class="button featured__button">ADD TO CART</button>
+                </article>
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/413yPKpAmXL._SX300_SY300_QL70_FMwebp_.jpg" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">Fastrack</h3>
+                        <p class="featured__desc">Limitless Fs1 Pro Smart Watch, Singlesync Bt Calling, 110+Sports Modes, Upto 7 Days Battery</p>
+                        <span class="featured__price">₹ 2,699</span>
+                    </div>
+
+                    <button class="button featured__button">ADD TO CART</button>
+                </article>
+            </div>
+        </section>
+
+        <!--==================== STORY ====================-->
+        <section class="story section container">
+            <div class="story__container grid">
+                <div class="story__data">
+                    <h2 class="section__title story__section-title">
+                        Best Collection of 2023
+                    </h2>
+
+                    <h1 class="story__title">
+                        Share Love & Time Together: <br> Explore Our Couple's Watch Collection
+                    </h1>
+
+                    <p class="story__description">
+                        Crafted to symbolize unity and shared moments, our Couple's Watch Collection embodies elegance and connection. 
+                        Each timepiece is designed to complement your bond, celebrating the beauty of togetherness and love.
+                    </p>
+
+                    <a href="#" class="button button--small">Discover</a>
+                </div>
+
+                <div class="story__images">
+                    <img src="https://jokerandwitch.com/cdn/shop/products/JWCW160_1800x1800.jpg?v=1611842717" alt="" class="story__img">
+                    <div class="story__square"></div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PRODUCTS ====================-->
+        <section class="products section container" id="products">
+            <h2 class="section__title">
+                Products
+            </h2>
+
+            <!-- Men's Products Section -->
+            <section class="products__category">
+                <h3 class="category__title">Men</h3>
+                <div class="products__container grid">
+                    <article class="products__card">
+                        <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/417wz7LpNxL._SX300_SY300_QL70_FMwebp_.jpg" alt="" class="products__img">
+                        <h3 class="products__title">Fossil</h3>
+                        <p class="products__desc">Autocross Analog Black Dial Men's Watch-BQ2551</p>
+                        <span class="products__price">₹ 9,995</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71Kx6rgmlRS._SX522_.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">Timex</h3>
+                        <p class="products__desc">Analog Men's Watch (Dial Colored Strap)</p>
+                        <span class="products__price">₹ 957</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/41dg1V9hTOL._SX300_SY300_QL70_FMwebp_.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">Fire-Boltt</h3>
+                        <p class="products__desc">Talk 2 Pro Ultra 1.39" Round Display Stainless Steel Luxury Smart Watch, Bluetooth Calling & 360 Health Monitoring, 123 Sports Modes, Inbuilt Voice Assistant (Black)</p>
+                        <span class="products__price">₹ 1,799</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Women's Products Section -->
+            <section class="products__category">
+                <h3 class="category__title">Women</h3>
+                <div class="products__container grid">
+                    <article class="products__card">
+                        <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71xgxbk51ZL._SX522_.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">LOUIS DEVIN</h3>
+                        <p class="products__desc">Rose Gold Plated Mesh Chain Analog Wrist Watch for Women</p>
+                        <span class="products__price">₹ 1,957</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/817iC5Eq49L._SX522_.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">SWISSTONE</h3>
+                        <p class="products__desc">Analog Women's Watch (Pink Dial Silver Colored Strap)</p>
+                        <span class="products__price">₹ 659</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/41a2CuatkUL._SX300_SY300_QL70_FMwebp_.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">Chumbak</h3>
+                        <p class="products__desc">Women’s Smartwatch (Rainforest) | Bluetooth | 1.83-Inch HD Display | 24*7 Health Tracking Including Blood Oxygen | HR & BP Monitor|Fitness, Multi-Sport Mode & Sleep Tracking | 100+ Watch Faces</p>
+                        <span class="products__price">₹ 1,895</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Kid's Products Section -->
+            <section class="products__category">
+                <h3 class="category__title">Kids</h3>
+                <div class="products__container grid">
+                    <article class="products__card">
+                        <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71KSeyXsg-L._SY679_.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">ON TIME OCTUS</h3>
+                        <p class="products__desc">Digital Pink Black Dial Kids Watch for Girls</p>
+                        <span class="products__price">₹ 379</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71tF6JBQFUL._SY550_.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">SWADESI STUFF</h3>
+                        <p class="products__desc">Digital Army Green Black Dial Kids Watch for Boys</p>
+                        <span class="products__price">₹ 399</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+
+                    <article class="products__card">
+                        <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/51UH6ZorNeL._SX679_.jpg" alt="" class="products__img">
+
+                        <h3 class="products__title">Acnos</h3>
+                        <p class="products__desc">Fashionable, Waterproof Sports Square Electronic Led Watch for Kid (Combo of 2)</p>
+                        <span class="products__price">₹ 759</span>
+
+                        <button class="products__button">
+                            <i class='bx bx-shopping-bag'></i>
+                        </button>
+                    </article>
+                </div>
+            </section>
+
+            
+        </section>
+
+        <!--==================== TESTIMONIAL ====================-->
+        <section class="testimonial section container">
+            <div class="testimonial__container grid">
+                <div class="swiper testimonial-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__quote">
+                                <i class='bx bxs-quote-alt-left' ></i>
+                            </div>
+                            <p class="testimonial__description">
+                                "Love how these watches keep up with the latest trends! The quality is impressive, and the price is unbeatable. Highly recommended!
+                            </p>
+                            <h3 class="testimonial__date">March 27, 2022</h3>
+    
+                            <div class="testimonial__perfil">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfG9R04plEK2ZESPyaNt9Tnp5ugo9-9hpiWA&usqp=CAU" alt="" class="testimonial__perfil-img">
+    
+                                <div class="testimonial__perfil-data">
+                                    <span class="testimonial__perfil-name">Rajesh Reddy</span>
+                                    <span class="testimonial__perfil-detail">Software Engineer</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__quote">
+                                <i class='bx bxs-quote-alt-left' ></i>
+                            </div>
+                            <p class="testimonial__description">
+                                Thrilled with our family's new watch collection! It was amazing to find styles that suit everyone's taste and personality. 
+                                The quality is exceptional, and the variety available made shopping so convenient. 
+                                Thanks for making our family time even more special!
+                            </p>
+                            <h3 class="testimonial__date">August 3, 2022</h3>
+    
+                            <div class="testimonial__perfil">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5H5kFS5x-JlkbNHc7HU5T2w4JIuKP6hcvOMz2NiR9iwT50yUVGyEGfGUDhsds9dHHB3I&usqp=CAU" alt="" class="testimonial__perfil-img">
+    
+                                <div class="testimonial__perfil-data">
+                                    <span class="testimonial__perfil-name">Vani Kumar</span>
+                                    <span class="testimonial__perfil-detail">Businesswoman</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__quote">
+                                <i class='bx bxs-quote-alt-left' ></i>
+                            </div>
+                            <p class="testimonial__description">
+                                Thank you for the beautiful couple's watch set! My partner and I absolutely adore them. 
+                                The design is stunning, and they truly symbolize our bond. 
+                                We appreciate the attention to detail and the seamless shopping experience. 
+                                Definitely recommending these watches to friends and family!
+                            </p>
+                            <h3 class="testimonial__date">May 25, 2023</h3>
+    
+                            <div class="testimonial__perfil">
+                                <img src="https://e7.pngegg.com/pngimages/122/453/png-clipart-computer-icons-user-profile-avatar-female-profile-heroes-head.png" alt="" class="testimonial__perfil-img">
+    
+                                <div class="testimonial__perfil-data">
+                                    <span class="testimonial__perfil-name">Manasa Samyuktha</span>
+                                    <span class="testimonial__perfil-detail">Teacher</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="swiper-button-next">
+                        <i class='bx bx-right-arrow-alt' ></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class='bx bx-left-arrow-alt' ></i>
+                    </div>
+                </div>
+
+                <div class="testimonial__images">
+                    <div class="testimonial__square"></div>
+                    <img src="https://m.media-amazon.com/images/I/81xQS3Bd6vL.jpg" alt="" class="testimonial__img">
+                </div>
+            </div>
+        </section>
+
+        <!--==================== NEW ====================-->
+        <section class="new section container" id="new">
+            <h2 class="section__title">
+                New Arrivals
+            </h2>
+            
+            <div class="new__container">
+                <div class="swiper new-swiper">
+                    <div class="swiper-wrapper">
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+    
+                            <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/5159txtY55L._SX425_.jpg" alt="" class="new__img">
+    
+                            <div class="new__data">
+                                <h3 class="new__title">FASTRACK</h3>
+                                <p class="new__desc">Ruffles Analog Beige Dial Women's Watch-6216QM01/NR6216QM01</p>
+                                <span class="new__price">₹ 2,875</span>
+                            </div>
+    
+                            <button class="button new__button">ADD TO CART</button>
+                        </article>
+
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+    
+                            <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/417wz7LpNxL._SX300_SY300_QL70_FMwebp_.jpg" alt="" class="new__img">
+    
+                            <div class="new__data">
+                                <h3 class="new__title">FOSSIL</h3>
+                                <p class="new__desc">Autocross Analog Black Dial Men's Watch-BQ2551</p>
+                                <span class="new__price">₹ 9,995</span>
+                            </div>
+    
+                            <button class="button new__button">ADD TO CART</button>
+                        </article>
+
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+    
+                            <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/413yPKpAmXL._SX300_SY300_QL70_FMwebp_.jpg" alt="" class="new__img">
+    
+                            <div class="new__data">
+                                <h3 class="new__title">FASTRACK</h3>
+                                <p class="new__desc">Limitless Fs1 Pro Smart Watch, Singlesync Bt Calling, 110+Sports Modes, Upto 7 Days Battery</p>
+                                <span class="new__price">₹ 2,699</span>
+                            </div>
+    
+                            <button class="button new__button">ADD TO CART</button>
+                        </article>
+
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+    
+                            <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/51UH6ZorNeL._SX679_.jpg" alt="" class="new__img">
+    
+                            <div class="new__data">
+                                <h3 class="new__title">ACNOS</h3>
+                                <p class="new__desc">Fashionable, Waterproof Sports Square Electronic Led Watch for Kid (Combo of 2)</p>
+                                <span class="new__price">₹ 759</span>
+                            </div>
+    
+                            <button class="button new__button">ADD TO CART</button>
+                        </article>                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== NEWSLETTER ====================-->
+        <section class="newsletter section container">
+            <div class="newsletter__bg grid">
+                <div>
+                    <h2 class="newsletter__title">Subscribe Our <br> Newsletter</h2>
+                    <p class="newsletter__description">
+                        Don't miss out on your discounts. Subscribe to our email 
+                        newsletter to get the best offers, discounts, coupons, 
+                        gifts and much more.
+                    </p>
+                </div>
+
+                <form action="" class="newsletter__subscribe">
+                    <input type="email" placeholder="Enter your email" class="newsletter__input">
+                    <button class="button">
+                        SUBSCRIBE
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Our information</h3>
+
+                <ul class="footer__list">
+                    <li>Chennai, Tamil Nadu</li>
+                    <li>India</li>
+                    <li>6040-6640</li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">About Us</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Support Center</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Customer Support</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Copy Right</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Other Products</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Scrunchies</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Removable Watch Straps</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Smart Watch Screen Protector</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Watch Batteries</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Social</h3>
+
+                <ul class="footer__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <span class="footer__copy">&#169; Watchful Wrist. All rights reserved</span>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up"> 
+        <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+    </a>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="script.js"></script>
+</body>
+</html>
